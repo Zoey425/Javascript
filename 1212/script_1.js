@@ -43,3 +43,35 @@ if(height) {
 } else {
   console.log("Height is UNDEFINED");
 }
+
+
+
+// Equality Operators:: == vs. ===
+
+const age = 18;
+if (age === 18) console.log("You just become an adult :) (strict)");
+if(age == 18) console.log("you just became and adult (loose)");
+// == 는 문자열도 동등하게 본다
+
+
+const favorite = Number(prompt("what is your favorite number?"));
+// const favorite = prompt("what is your favorite number?");
+
+console.log(favorite);
+console.log(typeof favorite);
+
+if(favorite == 23) { // '23' == 23
+  console.log('Cool! 23 is an amazing number')
+}
+
+
+if(favorite === 23) { // '23' == 23
+  console.log('Cool! 23 is an amazing number (number)');
+} else if(favorite === 7) {
+  console.log('7 is also a cool number');
+} else {
+  console.log('Number is not 23 or 7');
+}
+
+
+if(favorite !== 23) console.log("Why not 23?");
