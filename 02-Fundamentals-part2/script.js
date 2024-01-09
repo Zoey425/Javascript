@@ -90,3 +90,19 @@ console.log(myAge, myAge2);
 // 식들은 값을 생성하고 이 전체 값을 변수에 할당하고
 // 변수는 함수 값을 가지고 있으니 값을 반환함.
 // 그래서 함수는 값이니 변수에 할당 가능.
+
+
+
+// Arrow function
+const calcAge3 = birthYear => year - birthYear;
+const age3 = calcAge3(1989);
+console.log(age3);
+
+
+const yearUntilRetirement = (birthYear, firstName) => {
+  const age4 = year - birthYear;
+  const retirement = 65 - age4;
+  return `${firstName} retires in ${retirement} years`;
+}
+
+console.log(yearUntilRetirement(1980, 'Sofie'));
