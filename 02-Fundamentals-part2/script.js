@@ -21,28 +21,28 @@
 
 // FUNCTION 
 
-function logger() {
-  console.log('Hello this is the function');
-}
+// function logger() {
+//   console.log('Hello this is the function');
+// }
 
 // calling / running / invoking function
-logger();
-logger();
-logger();
+// logger();
+// logger();
+// logger();
 // we can use or call the function as much as I can.
 
 
-function fruitProcessor(apples, oranges) {
-  //console.log(apples, oranges);
-  const  juice = `This juice with ${apples} apples and ${oranges} oranges.`;
-  return juice;
-}
+// function fruitProcessor(apples, oranges) {
+//   //console.log(apples, oranges);
+//   const  juice = `This juice with ${apples} apples and ${oranges} oranges.`;
+//   return juice;
+// }
 
 
-fruitProcessor(4, 0);
-const appleJuice = fruitProcessor(6, 0);
-console.log(appleJuice);
-console.log(fruitProcessor(6, 0));
+// fruitProcessor(4, 0);
+// const appleJuice = fruitProcessor(6, 0);
+// console.log(appleJuice);
+// console.log(fruitProcessor(6, 0));
 
 // Recap 
 // fruitProcessor 함수에서 특정 값인 6,0을 파라미터로 받음
@@ -54,5 +54,39 @@ console.log(fruitProcessor(6, 0));
 // 그리고 콘솔로 log 함
 // 물론, 직접적으로 log도 가능함. console.log(fruitProcessor(6, 0));
 
-const appleOrangeJuice = fruitProcessor(3, 5);
-console.log(appleOrangeJuice);
+// const appleOrangeJuice = fruitProcessor(3, 5);
+// console.log(appleOrangeJuice);
+
+
+
+
+// Function declarations vs Expressions
+let now = new Date();
+let year = now.getFullYear(); 
+
+
+// Function declarations
+function calcAge1(birthYear) {
+  const age = year - birthYear;
+  return age;
+}
+
+const myAge = calcAge1(1992);
+console.log(myAge);
+
+
+// Function expressions
+const calcAge2 = function (birthYear) {
+  return year - birthYear;
+}
+
+const myAge2 = calcAge2(1993);
+console.log(myAge2);
+
+
+console.log(myAge, myAge2);
+
+// function은 사실 식이다
+// 식들은 값을 생성하고 이 전체 값을 변수에 할당하고
+// 변수는 함수 값을 가지고 있으니 값을 반환함.
+// 그래서 함수는 값이니 변수에 할당 가능.
