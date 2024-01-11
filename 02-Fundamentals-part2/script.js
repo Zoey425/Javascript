@@ -204,3 +204,31 @@ console.log(age11, age22, age33);
 
 const ages = [calcAge2(years2[0]), calcAge2(years2[1]), calcAge2(years2[years2.length - 1])];
 console.log(ages);
+
+
+// Basic Array Operations(Methods)
+const people = ['Jay', 'Chris', 'Peter'];
+
+//Add elements
+people.push('John');
+console.log(people);
+
+people.unshift('Steven');
+console.log(people);
+
+// Remove elements
+people.pop(); //last
+console.log(people);
+
+people.shift(); // first
+console.log(people);
+
+console.log(people.indexOf('Chris'));
+console.log(people.indexOf('Steven'));
+
+console.log(people.includes('Steven'));
+console.log(people.includes('Jay'));
+
+if(people.includes('Jay')){
+  console.log('You have a friend called Jay')
+}
