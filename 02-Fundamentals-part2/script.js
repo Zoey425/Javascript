@@ -161,3 +161,46 @@ function checkWinner(avgKoalas, avgDolphins){
 }
 
 checkWinner(scoreDolphins, scoreKoalas);
+
+
+
+
+// Introduction to Arrays
+
+const friend1 = 'Mike';
+const friend2 = 'Steven';
+const friend3 = 'Samuel';
+
+// We use most this way.
+const friends = ['Mike', 'Steven', 'Samuel'];
+console.log(friends);
+
+
+// Another way
+const years1 = new Array(1992, 1993, 1994, 1995);
+console.log(years1);
+
+
+console.log(friends[0]);
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+// 길이(3)에서 -1 되어서 2번째인 samuel이 나오게됨.
+
+friends[2] = 'Jay';
+console.log(friends);
+
+const firstName = 'Park';
+const Jonas = [firstName, 'Zoey', year - 1991, 'developer', friends];
+
+console.log(Jonas);
+
+const years2 = [1990, 1967, 2002, 2010, 2020];
+console.log(calcAge2(years2));
+
+const age11 = calcAge2(years2[0]);
+const age22 = calcAge2(years2[1]);
+const age33 = calcAge2(years2[years2.length - 1]);
+console.log(age11, age22, age33);
+
+const ages = [calcAge2(years2[0]), calcAge2(years2[1]), calcAge2(years2[years2.length - 1])];
+console.log(ages);
