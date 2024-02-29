@@ -280,3 +280,45 @@ const jonas = {
 // 배열과 마찬가지로 다른 변수들을 객체로 분류하는데 객체를 사용
 // 배열과 다르게 Object의 순서는 전혀 중요하지 않음.
 // 배열은 순서가 중요하지만, 객체는 비구조적인 데이터에 사용하는 것이 좋다.
+
+
+// Dot vs. Bracket Notation[]
+// How to retreat to data from Object
+// How to change to data from Object
+
+console.log(jonas);
+console.log(jonas.lastName) // used dot, actually Dot is the operator here.
+console.log(jonas['firstName']); // used bracket notation as Operation.
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+//But cant use with Dot.
+//console.log(jonas.'last' + nameKey);
+//Unexpected string (at script.js:298:19)
+
+// What situation should we use Dot notation and when do we use bracket notation
+// 속성을 먼저 검색해야 할 때, bracket notation 사용하는게 좋음.
+// 그 이외에는 Dot notation 사용하는게 좋음 훨 깔끔하고 쉬움
+
+// e.g
+const interestedIn = prompt(
+  'What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends'
+);
+
+
+if(jonas[interestedIn]){
+  console.log(jonas[interestedIn]);
+  // prompt에 정의되지 않은 key value를 넣으면 undefined 나옴.
+} else {
+  console.log("Wrong request! Please try again");
+}
+
+
+jonas.location = 'South Korea';
+jonas['instagram'] = '@hahahlw.s';
+console.log(jonas);
+
+console.log('Jonas has ' + jonas.friends.length + ' friends, and his best friend is called ' + jonas.friends[0]);
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
