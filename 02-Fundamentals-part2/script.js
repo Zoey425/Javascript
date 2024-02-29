@@ -232,3 +232,51 @@ console.log(people.includes('Jay'));
 if(people.includes('Jay')){
   console.log('You have a friend called Jay')
 }
+
+
+// CHALLENGE #2
+// Steven wants you to improve his tip calculator, using the same rules as before — tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+// Your tasks:
+// Write a function calcTip that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from the first tip calculator challenge if you need to).
+// Use the function type you like the most. Test the function using a bill value of 100.
+// And now let's use arrays! So, create an array called bills containing the test data below.
+// Create an array called tips containing the tip value for each bill, calculated from the function you created before.
+// BONUS: Create an array totals containing the total values, so the bill + tip.
+
+// TEST DATA: 125, 555, and 44.
+
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [125, 555, 44]; 
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[1]+tips[2]];
+console.log(bills, tips, totals);
+
+
+// Object
+
+const jonasArray = [
+  'Jonas',
+  'Schmedthmann',
+  2037-1992,
+  'teacher',
+  ['Mike', 'Peter', 'Zoey']
+];
+
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedthmann',
+  age: 2037-1992,
+  job: 'teacher',
+  friends: ['Mike', 'Peter', 'Zoey']
+};
+
+// 위에서 보듯이 키에 값을 할당 할 수 있다.
+// Array에서는 불가능한 키에 값을 직업 할당 할 수 있다.
+// 각각의 key(즉, firstName, lastName etc....)는 속성 'Jonas'는 Value
+// 배열과 마찬가지로 다른 변수들을 객체로 분류하는데 객체를 사용
+// 배열과 다르게 Object의 순서는 전혀 중요하지 않음.
+// 배열은 순서가 중요하지만, 객체는 비구조적인 데이터에 사용하는 것이 좋다.
