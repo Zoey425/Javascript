@@ -61,30 +61,30 @@
 
 
 // Function declarations vs Expressions
-let now = new Date();
-let year = now.getFullYear(); 
+// let now = new Date();
+// let year = now.getFullYear(); 
 
 
 // Function declarations
-function calcAge1(birthYear) {
-  const age = year - birthYear;
-  return age;
-}
+// function calcAge1(birthYear) {
+//   const age = year - birthYear;
+//   return age;
+// }
 
-const myAge = calcAge1(1992);
-console.log(myAge);
-
-
-// Function expressions
-const calcAge2 = function (birthYear) {
-  return year - birthYear;
-}
-
-const myAge2 = calcAge2(1993);
-console.log(myAge2);
+// const myAge = calcAge1(1992);
+// console.log(myAge);
 
 
-console.log(myAge, myAge2);
+// // Function expressions
+// const calcAge2 = function (birthYear) {
+//   return year - birthYear;
+// }
+
+// const myAge2 = calcAge2(1993);
+// console.log(myAge2);
+
+
+// console.log(myAge, myAge2);
 
 // function은 사실 식이다
 // 식들은 값을 생성하고 이 전체 값을 변수에 할당하고
@@ -94,36 +94,36 @@ console.log(myAge, myAge2);
 
 
 // Arrow function
-const calcAge3 = birthYear => year - birthYear;
-const age3 = calcAge3(1989);
-console.log(age3);
+// const calcAge3 = birthYear => year - birthYear;
+// const age3 = calcAge3(1989);
+// console.log(age3);
 
 
-const yearUntilRetirement = (birthYear, firstName) => {
-  const age4 = year - birthYear;
-  const retirement = 65 - age4;
-  return `${firstName} retires in ${retirement} years`;
-}
+// const yearUntilRetirement = (birthYear, firstName) => {
+//   const age4 = year - birthYear;
+//   const retirement = 65 - age4;
+//   return `${firstName} retires in ${retirement} years`;
+// }
 
-console.log(yearUntilRetirement(1980, 'Sofie'));
-
-
-// Function calling other functions
-
-function cutFruitPieces(fruit) {
-  return fruit * 4;
-}
-
-function fruitProcessor(apples, oranges) {
-  const applePieces = cutFruitPieces(apples);
-  const orangePieces = cutFruitPieces(oranges);
-
-  const  juice = `This juice with ${applePieces} apples and ${orangePieces} oranges.`;
-  return juice;
-}
+// console.log(yearUntilRetirement(1980, 'Sofie'));
 
 
-console.log(fruitProcessor(2, 3));
+// // Function calling other functions
+
+// function cutFruitPieces(fruit) {
+//   return fruit * 4;
+// }
+
+// function fruitProcessor(apples, oranges) {
+//   const applePieces = cutFruitPieces(apples);
+//   const orangePieces = cutFruitPieces(oranges);
+
+//   const  juice = `This juice with ${applePieces} apples and ${orangePieces} oranges.`;
+//   return juice;
+// }
+
+
+// console.log(fruitProcessor(2, 3));
 
 
 // CODE TEST
@@ -145,93 +145,93 @@ console.log(fruitProcessor(2, 3));
 
 
 
-const calcAverage = (a, b, c) => (a+b+c)/3
+// const calcAverage = (a, b, c) => (a+b+c)/3
 
-let scoreDolphins = calcAverage(44, 23, 71);
-let scoreKoalas = calcAverage(65, 60, 99);
+// let scoreDolphins = calcAverage(44, 23, 71);
+// let scoreKoalas = calcAverage(65, 60, 99);
 
-function checkWinner(avgKoalas, avgDolphins){
-    if(avgDolphins >= 2 * avgKoalas) {
-       console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-    }else if(avgKoalas >= 2 * avgDolphins){
-       console.log(`Dolphins win (${avgKoalas} vs. ${avgDolphins})`);
-    }else{
-        console.log('No team wins...');
-    }
-}
+// function checkWinner(avgKoalas, avgDolphins){
+//     if(avgDolphins >= 2 * avgKoalas) {
+//        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+//     }else if(avgKoalas >= 2 * avgDolphins){
+//        console.log(`Dolphins win (${avgKoalas} vs. ${avgDolphins})`);
+//     }else{
+//         console.log('No team wins...');
+//     }
+// }
 
-checkWinner(scoreDolphins, scoreKoalas);
+// checkWinner(scoreDolphins, scoreKoalas);
 
 
 
 
 // Introduction to Arrays
 
-const friend1 = 'Mike';
-const friend2 = 'Steven';
-const friend3 = 'Samuel';
+// const friend1 = 'Mike';
+// const friend2 = 'Steven';
+// const friend3 = 'Samuel';
 
-// We use most this way.
-const friends = ['Mike', 'Steven', 'Samuel'];
-console.log(friends);
-
-
-// Another way
-const years1 = new Array(1992, 1993, 1994, 1995);
-console.log(years1);
+// // We use most this way.
+// const friends = ['Mike', 'Steven', 'Samuel'];
+// console.log(friends);
 
 
-console.log(friends[0]);
-console.log(friends.length);
-console.log(friends[friends.length - 1]);
-// 길이(3)에서 -1 되어서 2번째인 samuel이 나오게됨.
-
-friends[2] = 'Jay';
-console.log(friends);
-
-const firstName = 'Park';
-const Jonas = [firstName, 'Zoey', year - 1991, 'developer', friends];
-
-console.log(Jonas);
-
-const years2 = [1990, 1967, 2002, 2010, 2020];
-console.log(calcAge2(years2));
-
-const age11 = calcAge2(years2[0]);
-const age22 = calcAge2(years2[1]);
-const age33 = calcAge2(years2[years2.length - 1]);
-console.log(age11, age22, age33);
-
-const ages = [calcAge2(years2[0]), calcAge2(years2[1]), calcAge2(years2[years2.length - 1])];
-console.log(ages);
+// // Another way
+// const years1 = new Array(1992, 1993, 1994, 1995);
+// console.log(years1);
 
 
-// Basic Array Operations(Methods)
-const people = ['Jay', 'Chris', 'Peter'];
+// console.log(friends[0]);
+// console.log(friends.length);
+// console.log(friends[friends.length - 1]);
+// // 길이(3)에서 -1 되어서 2번째인 samuel이 나오게됨.
 
-//Add elements
-people.push('John');
-console.log(people);
+// friends[2] = 'Jay';
+// console.log(friends);
 
-people.unshift('Steven');
-console.log(people);
+// const firstName = 'Park';
+// const Jonas = [firstName, 'Zoey', year - 1991, 'developer', friends];
 
-// Remove elements
-people.pop(); //last
-console.log(people);
+// console.log(Jonas);
 
-people.shift(); // first
-console.log(people);
+// const years2 = [1990, 1967, 2002, 2010, 2020];
+// console.log(calcAge2(years2));
 
-console.log(people.indexOf('Chris'));
-console.log(people.indexOf('Steven'));
+// const age11 = calcAge2(years2[0]);
+// const age22 = calcAge2(years2[1]);
+// const age33 = calcAge2(years2[years2.length - 1]);
+// console.log(age11, age22, age33);
 
-console.log(people.includes('Steven'));
-console.log(people.includes('Jay'));
+// const ages = [calcAge2(years2[0]), calcAge2(years2[1]), calcAge2(years2[years2.length - 1])];
+// console.log(ages);
 
-if(people.includes('Jay')){
-  console.log('You have a friend called Jay')
-}
+
+// // Basic Array Operations(Methods)
+// const people = ['Jay', 'Chris', 'Peter'];
+
+// //Add elements
+// people.push('John');
+// console.log(people);
+
+// people.unshift('Steven');
+// console.log(people);
+
+// // Remove elements
+// people.pop(); //last
+// console.log(people);
+
+// people.shift(); // first
+// console.log(people);
+
+// console.log(people.indexOf('Chris'));
+// console.log(people.indexOf('Steven'));
+
+// console.log(people.includes('Steven'));
+// console.log(people.includes('Jay'));
+
+// if(people.includes('Jay')){
+//   console.log('You have a friend called Jay')
+// }
 
 
 // CHALLENGE #2
@@ -246,33 +246,33 @@ if(people.includes('Jay')){
 // TEST DATA: 125, 555, and 44.
 
 
-const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-}
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
 
-const bills = [125, 555, 44]; 
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[1]+tips[2]];
-console.log(bills, tips, totals);
+// const bills = [125, 555, 44]; 
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[1]+tips[2]];
+// console.log(bills, tips, totals);
 
 
 // Object
 
-const jonasArray = [
-  'Jonas',
-  'Schmedthmann',
-  2037-1992,
-  'teacher',
-  ['Mike', 'Peter', 'Zoey']
-];
+// const jonasArray = [
+//   'Jonas',
+//   'Schmedthmann',
+//   2037-1992,
+//   'teacher',
+//   ['Mike', 'Peter', 'Zoey']
+// ];
 
-const jonas = {
-  firstName: 'Jonas',
-  lastName: 'Schmedthmann',
-  age: 2037-1992,
-  job: 'teacher',
-  friends: ['Mike', 'Peter', 'Zoey']
-};
+// const jonas = {
+//   firstName: 'Jonas',
+//   lastName: 'Schmedthmann',
+//   age: 2037-1992,
+//   job: 'teacher',
+//   friends: ['Mike', 'Peter', 'Zoey']
+// };
 
 // 위에서 보듯이 키에 값을 할당 할 수 있다.
 // Array에서는 불가능한 키에 값을 직업 할당 할 수 있다.
@@ -286,13 +286,13 @@ const jonas = {
 // How to retreat to data from Object
 // How to change to data from Object
 
-console.log(jonas);
-console.log(jonas.lastName) // used dot, actually Dot is the operator here.
-console.log(jonas['firstName']); // used bracket notation as Operation.
+// console.log(jonas);
+// console.log(jonas.lastName) // used dot, actually Dot is the operator here.
+// console.log(jonas['firstName']); // used bracket notation as Operation.
 
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey]);
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey]);
 
 //But cant use with Dot.
 //console.log(jonas.'last' + nameKey);
@@ -303,22 +303,43 @@ console.log(jonas['last' + nameKey]);
 // 그 이외에는 Dot notation 사용하는게 좋음 훨 깔끔하고 쉬움
 
 // e.g
-const interestedIn = prompt(
-  'What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends'
-);
+// const interestedIn = prompt(
+//   'What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends'
+// );
 
 
-if(jonas[interestedIn]){
-  console.log(jonas[interestedIn]);
-  // prompt에 정의되지 않은 key value를 넣으면 undefined 나옴.
-} else {
-  console.log("Wrong request! Please try again");
-}
+// if(jonas[interestedIn]){
+//   console.log(jonas[interestedIn]);
+//   // prompt에 정의되지 않은 key value를 넣으면 undefined 나옴.
+// } else {
+//   console.log("Wrong request! Please try again");
+// }
 
 
-jonas.location = 'South Korea';
-jonas['instagram'] = '@hahahlw.s';
-console.log(jonas);
+// jonas.location = 'South Korea';
+// jonas['instagram'] = '@hahahlw.s';
+// console.log(jonas);
 
-console.log('Jonas has ' + jonas.friends.length + ' friends, and his best friend is called ' + jonas.friends[0]);
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+// console.log('Jonas has ' + jonas.friends.length + ' friends, and his best friend is called ' + jonas.friends[0]);
+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+
+// Object Method
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedthmann',
+  birthYear: 1992,
+  job: 'teacher',
+  friends: ['Mike', 'Peter', 'Zoey'],
+  hasDriverLicense: true,
+
+  calcAge: function () {
+    // console.log(this);
+    return 2030 - this.birthYear;
+  }
+};
+
+console.log(jonas.calcAge(1992));
+console.log(jonas['calcAge'](1992));
+console.log(jonas['calcAge'](jonas.birthYear));
+console.log(jonas.calcAge());
