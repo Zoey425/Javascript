@@ -391,3 +391,74 @@ console.log(jonas.getSummary());
  for(let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition ${rep}`);
  }
+
+ const zoey = [
+  'Zoey',
+  'Park',
+  2045 - 1991,
+  'developer',
+  ['Thai', 'Mike', 'Emma'],
+  true
+ ];
+ const types = [];
+
+ for (let i = 0; i < zoey.length; i++) {
+    // Reading from zoey array
+    console.log(zoey[i], typeof zoey[i]);
+
+    // Filling types array
+    // types[i] = typeof zoey[i];
+
+    types.push(typeof zoey[i]);
+  }
+
+  console.log(types);
+  
+
+  const year = [1992, 2001, 1965, 2026];
+  const age = [];
+
+  for (let i = 0; i < year.length; i++){
+    age.push(2027 - year[i]);
+  }
+
+  console.log(age);
+
+
+  // continue and break
+  for (let i = 0; i < zoey.length; i++){
+    if(typeof zoey[i] !== 'string') continue;
+    // it's only logs to the string to console.
+
+    console.log(zoey[i], typeof zoey[i]);
+  }
+
+
+
+  // continue
+  for (let i = 0; i < zoey.length; i++){
+    if(typeof zoey[i] !== 'string') continue;
+    // it's only logs to the string to console.
+
+    console.log(zoey[i], typeof zoey[i]);
+  }
+
+  // continue 구문은 현재 반복 이후 코드 실행하지 않고 다음 반복 시작
+  // 특정 조건을 만족하는 경우, 특정 반복 건너뛰고 다음 반복으로 진행할 때 유용
+  // 위 조건은 타입이 스트링이 아닐때 반복 건너뛰는거라
+  // 스트링이 아닌 타입은 다 건나 뛰는 결과가 나옴.
+
+
+
+console.log('----------------------')
+  // break
+  for (let i = 0; i < zoey.length; i++){
+    if(typeof zoey[i] === 'number') break;
+
+    console.log(zoey[i], typeof zoey[i]);
+  }
+
+  // break 구문은 현재의 반복문을 즉시 종료하고 반복문 외부로 나감
+  // 특정 조건을 만족하는 경우에 반복문을 중지할 떄 유용
+  // 위 조건은 타입이 number일 경우 반복문 중지
+  // 그래서 바로 number 타입이 나오자 마자 중지 되는 결과가 나옴.
