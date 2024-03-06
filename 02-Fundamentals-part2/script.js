@@ -385,3 +385,9 @@ console.log(jonas.getSummary());
     `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})`
   )
  }
+
+ // Iteration: The for Loop
+
+ for(let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep}`);
+ }
