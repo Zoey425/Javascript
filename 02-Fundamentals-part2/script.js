@@ -426,15 +426,6 @@ console.log(jonas.getSummary());
 
 
   // continue and break
-  for (let i = 0; i < zoey.length; i++){
-    if(typeof zoey[i] !== 'string') continue;
-    // it's only logs to the string to console.
-
-    console.log(zoey[i], typeof zoey[i]);
-  }
-
-
-
   // continue
   for (let i = 0; i < zoey.length; i++){
     if(typeof zoey[i] !== 'string') continue;
@@ -462,3 +453,17 @@ console.log('----------------------')
   // 특정 조건을 만족하는 경우에 반복문을 중지할 떄 유용
   // 위 조건은 타입이 number일 경우 반복문 중지
   // 그래서 바로 number 타입이 나오자 마자 중지 되는 결과가 나옴.
+
+  console.log('----------------------')
+  // Looping Backwards and Loops in Loops
+  // 루프시작을 배열의 길이로 시작하고, 배열이 0이 되었을때 종료되도록 설정했고, i가 1씩 감소.
+  for (let i = zoey.length - 1; i >= 0; i--){
+    console.log(i, zoey[i]);
+  }
+
+  for(let exercise = 1; exercise <= 3; exercise++){
+    console.log(`------------ Starting exercise ${exercise}`);
+    for ( let rep = 1; rep < 6; rep++) {
+      console.log(`Lifting weight repetition ${rep} !`)
+    }
+  }
