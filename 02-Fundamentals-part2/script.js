@@ -491,3 +491,35 @@ while(dice !== 6) {
 
 // dice가 6이 아니면 console.log에 나옴
 // 하지만 6일 경우 while문이 종료됨.
+
+
+//Challenge
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+/* Write your code below. Good luck! 🙂 */
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+
+for(let i=0; i < bills.length; i++){
+    tips.push(calcTip(bills[i]));
+    totals.push(tips[i]+bills[i]);
+}
+console.log(bills, tips, totals);
+
+const calcAverage2 = function(arr) {
+  let sum = 0;
+  for(let i = 0; i< arr.length; i++) {
+    // sum = sum + arr[i];
+    sum += arr[i];
+  }
+  return sum / arr.length;
+}
+
+console.log(calcAverage2(totals));
+console.log(calcAverage2(tips));
