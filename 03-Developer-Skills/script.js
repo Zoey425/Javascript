@@ -112,3 +112,28 @@ const calcTempAmplitudeBug = function (t1, t2) {
 
 const amplitudeBug = calcTempAmplitudeNew([3, 5, 1], [4, 9, 42]);
 console.log(amplitudeBug);
+
+// PROBLEM 3:
+
+// 1) 문제에 대한 이해
+// Array를 string으로 변경해야하고 ...으로 나눠짐
+// X days가 무엇인가? index + 1
+
+// 2) 문제를 작게 나눠보기
+// 어레이를 스트링으로 바꿔야함
+// 각각 요소를 문자열+℃ 로 바꿔야함
+// 문자열은 days를 포함해야함
+// 그리고 ...로 각 요소를 연결시켜야함
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+const printForecast = function (arr) {
+  let str = '';
+  for (let i = 0; i < arr.length; i++) {
+    str = str + `${arr[i]}℃ in ${i + 1} days ... `;
+  }
+  console.log('... ' + str);
+};
+
+printForecast(data2);
