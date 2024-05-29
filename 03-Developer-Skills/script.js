@@ -76,7 +76,7 @@ const measureKelvin = function () {
     unit: 'celsius',
 
     // 3. FIX
-    value: Number(prompt('Degrees celsius:')),
+    //value: Number(prompt('Degrees celsius:')),
   };
 
   // 2. FIND
@@ -88,3 +88,27 @@ const measureKelvin = function () {
 };
 // 1. IDENTIFY
 console.log(measureKelvin());
+console.log('-----------------------------------');
+console.log('-----------------------------------');
+
+// Using a debugger
+const calcTempAmplitudeBug = function (t1, t2) {
+  const temps = t1.concat(t2);
+
+  let max = temps[0]; // 시작점
+  let min = temps[0];
+
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== 'number') continue;
+
+    debugger;
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+
+const amplitudeBug = calcTempAmplitudeNew([3, 5, 1], [4, 9, 42]);
+console.log(amplitudeBug);
